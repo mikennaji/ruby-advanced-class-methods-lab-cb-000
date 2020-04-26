@@ -59,10 +59,8 @@ end
 def self.new_from_filename(filename)
   filename1 = filename.chomp(".mp3")
   names = filename1.split("-")
-  name =names[0].strip
-  song = names[1].strip
-  newsong =self.create_by_name(song)
-  newsong.artist_name = name
+  newsong =self.create_by_name(names[1].strip)
+  newsong.artist_name = names[0].strip
   newsong
 
 end
