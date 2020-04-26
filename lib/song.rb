@@ -57,8 +57,7 @@ def self.destroy_all
 end
 
 def self.new_from_filename(filename)
-  filename1 = filename.chomp(".mp3")
-  names = filename1.split("-")
+  names = filename.chomp(".mp3").split("-")
   newsong =self.create_by_name(names[1].strip)
   newsong.artist_name = names[0].strip
   newsong
